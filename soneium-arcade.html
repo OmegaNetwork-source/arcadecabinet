@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#111111">
-<title>SONEIUM ARCADE</title>
+<title>RETRO STACK</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -56,7 +56,7 @@ body.using-mouse{cursor:none;}
 <canvas id="three-canvas"></canvas>
 
 <div id="screen-ui">
-  <iframe id="screen-iframe" title="Soneium Arcade"></iframe>
+  <iframe id="screen-iframe" title="Retro Stack"></iframe>
 </div>
 
 <div id="info">
@@ -219,10 +219,10 @@ function makeSideArt(flip) {
   for(let x2=0;x2<256;x2+=18){ctx.beginPath();ctx.moveTo(x2,0);ctx.lineTo(x2,512);ctx.stroke();}
   for(let y2=0;y2<512;y2+=18){ctx.beginPath();ctx.moveTo(0,y2);ctx.lineTo(256,y2);ctx.stroke();}
   ctx.fillStyle='rgba(255,255,255,.025)'; ctx.font='bold 180px Arial'; ctx.textAlign='center';
-  ctx.fillText('SA',128,350);
+  ctx.fillText('RS',128,350);
   ctx.save(); ctx.translate(128,256); ctx.rotate(flip ? Math.PI/2 : -Math.PI/2);
   ctx.fillStyle='rgba(255,255,255,.2)'; ctx.font='bold 12px monospace'; ctx.textAlign='center';
-  ctx.fillText('SONEIUM ARCADE',0,0); ctx.restore();
+  ctx.fillText('RETRO STACK',0,0); ctx.restore();
   return new THREE.CanvasTexture(cv);
 }
 const mSideL = new THREE.MeshStandardMaterial({map:makeSideArt(false),roughness:.55,metalness:.15});
@@ -405,9 +405,9 @@ const mqCtx = mqC.getContext('2d');
 mqCtx.fillStyle='#fafafa'; mqCtx.fillRect(0,0,512,110);
 mqCtx.fillStyle='#1a1a1a'; mqCtx.fillRect(0,0,512,5); mqCtx.fillRect(0,105,512,5);
 mqCtx.fillStyle='#000'; mqCtx.font='bold 30px Arial'; mqCtx.textAlign='center';
-mqCtx.fillText('SONEIUM ARCADE',256,50);
+mqCtx.fillText('RETRO STACK',256,50);
 mqCtx.fillStyle='#444'; mqCtx.font='500 13px Arial';
-mqCtx.fillText('BUILT ON SONEIUM  ·  POWERED BY OMEGA',256,76);
+mqCtx.fillText('BUILT ON RETRO STACK  ·  POWERED BY OMEGA',256,76);
 const mqTex = new THREE.CanvasTexture(mqC);
 const mqMat = new THREE.MeshStandardMaterial({
   map:mqTex,

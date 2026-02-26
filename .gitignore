@@ -1,0 +1,12 @@
+# Optional: ignore large video to keep repo small (uncomment to use)
+# quake trailer.mp4
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
